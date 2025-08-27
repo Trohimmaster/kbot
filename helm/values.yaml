@@ -19,6 +19,8 @@ service:
   port: 80
   type: ClusterIP
 
+secret:
+  name: kbot-secret
 
 
 
