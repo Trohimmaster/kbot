@@ -36,4 +36,5 @@ helm-upgrade:
 		--namespace=$(NAMESPACE) --create-namespace \
 		--set image.registry=$(IMAGE_REGISTRY) \
 		--set image.repository=$(IMAGE_REPO) \
-		--set image.tag=$(IMAGE_TAG)
+		--set image.tag=$(IMAGE_TAG)\
+        --set secret.key=token
