@@ -7,8 +7,10 @@ autoscaling:
   targetCPUUtilizationPercentage: 80
 
 image:
-  repository: docker.io/trohimaster/kbot
-  tag: v1.0.0
+  registry: "ghcr.io"
+  repository: "trohimmaster/kbot"
+  tag: "v1.0.1-<GIT_SHA>"
+  os: linux
   arch: amd64
 
 TELE_TOKEN: "PLACEHOLDER_TOKEN"
@@ -16,3 +18,7 @@ TELE_TOKEN: "PLACEHOLDER_TOKEN"
 service:
   port: 80
   type: ClusterIP
+
+
+
+
