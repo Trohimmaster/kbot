@@ -1,6 +1,9 @@
 name: CICD pipeline
 
-on: push
+on:
+  push:
+    branches:
+      - develop
 
 permissions:
   contents: write
@@ -33,4 +36,9 @@ jobs:
 
       - name: Package Helm chart
         run: make helm-package
+
+      - name: Deploy Helm chart
+        env:
+          TELE_TOKEN: ${{ secrets.TELE_TOKEN }}
+        run: make helm-upgrade
  
