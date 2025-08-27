@@ -37,6 +37,13 @@ jobs:
       - name: Package Helm chart
         run: make helm-package
 
+      - name: Setup kubeconfig
+        run: |
+          mkdir -p ~/.kube
+          echo "$KUBECONFIG_DATA" | base64 -d > ~/.kube/config
+        env:
+          KUBECONFIG_DATA: ${{ secrets.KUBECONFIG_DATA }}
+
       - name: Deploy Helm chart
         env:
           TELE_TOKEN: ${{ secrets.TELE_TOKEN }}
