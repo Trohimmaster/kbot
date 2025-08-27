@@ -29,4 +29,8 @@ jobs:
           password: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Push image
-        run: make push  
+        run: make push 
+
+      - name: Package Helm chart
+        run: make helm-package
+ 
