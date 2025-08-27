@@ -13,11 +13,6 @@ NAMESPACE?=kbot
 test:
 	go test ./...
 
-# Линтер Go
-lint:
-	@echo "Running Go linters..."
-	golangci-lint run ./...
-
 # Сборка Docker образа
 build:
 	docker build -t $(IMAGE_REGISTRY)/$(IMAGE_REPO):$(IMAGE_TAG) .
