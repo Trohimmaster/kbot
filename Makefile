@@ -28,7 +28,7 @@ helm-lint:
 # Пакетирование Helm чарта
 helm-package:
 	mkdir -p charts
-	helm package .helm/kbot -d charts
+	helm package .helm -d charts
 
 # Деплой / обновление Helm релиза
 helm-upgrade:
