@@ -17,3 +17,6 @@ jobs:
 
       - name: Run test
         run: make test
+
+      - name: Run linter
+        run: make lint
