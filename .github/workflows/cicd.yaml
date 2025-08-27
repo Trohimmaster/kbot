@@ -2,6 +2,10 @@ name: CICD pipeline
 
 on: push
 
+permissions:
+  contents: write
+  packages: write
+
 jobs:
   ci:
     name: CI
