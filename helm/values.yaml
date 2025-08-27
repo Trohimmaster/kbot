@@ -1,0 +1,18 @@
+replicaCount: 1
+
+autoscaling:
+  enabled: false
+  minReplicas: 1
+  maxReplicas: 10
+  targetCPUUtilizationPercentage: 80
+
+image:
+  repository: docker.io/trohimaster/kbot
+  tag: v1.0.0
+  arch: amd64
+
+TELE_TOKEN: "PLACEHOLDER_TOKEN"
+
+service:
+  port: 80
+  type: ClusterIP
