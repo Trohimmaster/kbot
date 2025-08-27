@@ -1,7 +1,7 @@
 # Переменные
 IMAGE_REGISTRY?=ghcr.io
 IMAGE_REPO?=trohimmaster/kbot
-VERSION?=v1.0.1
+VERSION?=1.0.1
 GIT_SHA=$(shell git rev-parse --short HEAD)
 IMAGE_TAG=$(VERSION)-$(GIT_SHA)-linux-amd64
 NAMESPACE?=kbot
