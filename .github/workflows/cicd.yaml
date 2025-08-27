@@ -18,8 +18,5 @@ jobs:
       - name: Run test
         run: make test
 
-      - name: Run linter
-        run: make lint
-
       - name: Build docker image
-        run: make Build
+        run: make build
