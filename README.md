@@ -24,3 +24,4 @@ flowchart LR
   F --> G[Argo CD watches repo]
   G --> H[Sync Helm chart to cluster]
   H --> I[Bot running in Kubernetes]
+  
