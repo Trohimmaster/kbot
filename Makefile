@@ -31,11 +31,11 @@ helm-package:
 	helm package ./helm -d charts
 
 # Деплой / обновление Helm релиза
-helm-upgrade:
-	helm upgrade --install kbot ./charts/kbot-$(VERSION).tgz \
-		--namespace=$(NAMESPACE) --create-namespace \
-		--set image.registry=$(IMAGE_REGISTRY) \
-		--set image.repository=$(IMAGE_REPO) \
-		--set image.tag=$(IMAGE_TAG)\
-		--set secret.name=kbot-secret \
-        --set secret.key=token
+#helm-upgrade:
+#	helm upgrade --install kbot ./charts/kbot-$(VERSION).tgz \
+#		--namespace=$(NAMESPACE) --create-namespace \
+#		--set image.registry=$(IMAGE_REGISTRY) \
+#		--set image.repository=$(IMAGE_REPO) \
+#		--set image.tag=$(IMAGE_TAG)\
+#		--set secret.name=kbot-secret \
+#       --set secret.key=token
