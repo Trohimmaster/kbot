@@ -19,7 +19,7 @@ service:
   port: 80
   type: ClusterIP
 
-ecret:
+secret:
   name: kbot-secret
   key: token
 
