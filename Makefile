@@ -37,4 +37,5 @@ helm-upgrade:
 		--set image.registry=$(IMAGE_REGISTRY) \
 		--set image.repository=$(IMAGE_REPO) \
 		--set image.tag=$(IMAGE_TAG)\
+		--set secret.name=kbot-secret \
         --set secret.key=token
